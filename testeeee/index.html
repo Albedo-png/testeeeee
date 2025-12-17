@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um pedido sincero 💗</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Oi… 💕</h1>
+
+        <p>
+            Fiz essa página com carinho,  
+            só pra te fazer um pedido simples.
+        </p>
+
+        <p class="highlight">
+            Se não for incômodo, você me passaria seu Instagram?
+        </p>
+
+        <form id="romanticForm">
+            <input 
+                type="text" 
+                id="insta" 
+                placeholder="@seuinstagram"
+                required
+            >
+
+            <button type="submit">Enviar com carinho 💌</button>
+        </form>
+
+        <p class="thanks" id="thanksMsg">
+            Obrigado por responder 💖
+        </p>
+
+    </div>
+</div>
+
+<script>
+document.getElementById("romanticForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const insta = document.getElementById("insta").value;
+
+    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScCbNhFWWPN1-6gcVEh_jSY5G6haP5B_I6aQZOn2sVJwaZrDQ/formResponse";
+
+    const data = new FormData();
+    data.append("entry.1363807566", insta);
+
+    fetch(formURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+    });
+
+    document.getElementById("romanticForm").style.display = "none";
+    document.getElementById("thanksMsg").style.display = "block";
+});
+</script>
+
+</body>
+</html>
