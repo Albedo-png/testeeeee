@@ -6,23 +6,23 @@
 }
 
 body {
-    background-image: url("fundo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: -1;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
 }
 
 
@@ -88,4 +88,3 @@ button:hover {
   color: #e75480;
   font-weight: 600;
 }
-
